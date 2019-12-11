@@ -47,7 +47,8 @@ jobs:
        with:
          type: success
          job_name: slack
-         username: Tamara Shlomov 
-         url: moveo-bravo.slack.com
+         url: https://hooks.slack.com/services/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
+         username: tamara
+         channel: myndyou-android
          commit: true
-         token:  ""
+         token: ${{ secrets.GITHUB_TOKEN }} 

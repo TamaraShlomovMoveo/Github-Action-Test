@@ -45,10 +45,9 @@ jobs:
      - name: Slatify
        uses: homoluctus/slatify@v2.0.1
        with:
-         type: success
-         job_name: slack
-         url: https://hooks.slack.com/services/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
-         username: incoming-webhook
-         channel: github-action
+         type: 'success'
+         job_name: 'slack'
+         url: 'https://hooks.slack.com/services/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'
+         username: 'incoming-webhook'
+         channel: '#github-action'
          commit: true
-         token: ${{ secrets.GITHUB_TOKEN }}

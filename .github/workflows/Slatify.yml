@@ -47,7 +47,6 @@ jobs:
        with:
          type: 'success'
          job_name: 'slack'
-         url: 'https://hooks.slack.com/services/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'
-         username: 'incoming-webhook'
+         url: 'https://hooks.slack.com/services/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'
          channel: '#github-action'
          commit: true

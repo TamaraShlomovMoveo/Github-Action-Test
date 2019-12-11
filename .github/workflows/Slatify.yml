@@ -47,6 +47,6 @@ jobs:
        with:
          type: 'success'
          job_name: 'slack'
-         url: 'https://hooks.slack.com/services/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'
-         channel: '#github-action'
+         url: 'https://hooks.slack.com/services/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'
+         channel: '#general'
          commit: true

@@ -47,8 +47,8 @@ jobs:
        with:
          type: success
          job_name: slack
-         url: https://hooks.slack.com/services/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
-         username: Tamara Shlomov Nalbandyan
+         url: https://hooks.slack.com/services/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
+         username: incoming-webhook
          channel: github-action
          commit: true
          token: ${{ secrets.GITHUB_TOKEN }}

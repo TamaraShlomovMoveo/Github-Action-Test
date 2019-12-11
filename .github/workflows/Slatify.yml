@@ -8,6 +8,19 @@ on:
     
 jobs:
 
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
   my_job:
 
     runs-on: ubuntu-18.04
@@ -17,24 +30,12 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
-        node-version: 5.6.0
+        node-version: 8.11.1
 
     - name: Install Dependencies
       run: |
         npm install 
-        
-  build:
 
-    runs-on: ubuntu-18.04
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
         
   slack:
     

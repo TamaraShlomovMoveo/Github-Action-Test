@@ -3,9 +3,9 @@ name: SendNotificationToSlack
 on:
   push:
     branches:
-    - master
-    - release/*
-    
+      - master
+      - release/*
+
 jobs:
 
   build:
@@ -24,29 +24,45 @@ jobs:
   my_job:
 
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: 8.11.1
+      - uses: actions/checkout@v1
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8.11.1
 
-    - name: Install Dependencies
-      run: |
-        npm install 
+      - name: Install Dependencies
+        run: |
+          npm install
 
-        
-  slack:
-    
+
+  #  slack:
+  #
+  #    runs-on: ubuntu-latest
+  #
+  #    steps:
+  #     - name: Slatify
+  #       uses: homoluctus/slatify@v2.0.1
+  #       with:
+  #         type: 'success'
+  #         job_name: 'slack'
+  #         url: 'https://hooks.slack.com/services/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'
+  #         channel: '#general'
+  #         commit: true
+
+  slackNotification:
+    name: Slack Notification
     runs-on: ubuntu-latest
-    
     steps:
-     - name: Slatify
-       uses: homoluctus/slatify@v2.0.1
-       with:
-         type: 'success'
-         job_name: 'slack'
-         url: 'https://hooks.slack.com/services/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'
-         channel: '#general'
-         commit: true
+      - uses: actions/checkout@master
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@master
+          env:
+            SLACK_CHANNEL: general
+            SLACK_COLOR: '#3278BD'
+            SLACK_ICON: https://github.com/rtCamp.png?size=48
+            SLACK_MESSAGE: 'Post Content :rocket:'
+            SLACK_TITLE: Post Title
+            SLACK_USERNAME: rtCamp
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEB_HOOK }}

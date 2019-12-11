@@ -47,8 +47,8 @@ jobs:
        with:
          type: success
          job_name: slack
-         url: https://hooks.slack.com/services/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
-         username: tamara
-         channel: myndyou-android
+         url: https://hooks.slack.com/services/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
+         username: Tamara Shlomov Nalbandyan
+         channel: github-action
          commit: true
-         token: ${{ secrets.GITHUB_TOKEN }} 
+         token: ${{ secrets.GITHUB_TOKEN }}

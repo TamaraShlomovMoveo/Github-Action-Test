@@ -20,20 +20,13 @@ jobs:
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
-
-
-  upload_to_store:
-
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Upload Android Release to Play Store
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: il.co.moveo.github_action_test
           releaseFile: /app/release/app-release.apk
-#         track: production
-#         userFraction: 1
-#         whatsNewDirectory: /distribution/whatsnew
-#         mappingFile: /app/build/outputs/mapping/release/mapping.txt
+  #         track: production
+  #         userFraction: 1
+  #         whatsNewDirectory: /distribution/whatsnew
+  #         mappingFile: /app/build/outputs/mapping/release/mapping.txt

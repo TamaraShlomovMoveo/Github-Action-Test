@@ -32,7 +32,7 @@ jobs:
           packageName: il.co.moveo.github_action_test
 #          releaseFile: /app/build/outputs/apk/release/app-release.apk
 #          releaseFile: /app/release/app-release.apk
-          releaseFile: /app/release
+          releaseFile: Github-Action-Test/app/release
   #         track: production
   #         userFraction: 1
   #         whatsNewDirectory: /distribution/whatsnew

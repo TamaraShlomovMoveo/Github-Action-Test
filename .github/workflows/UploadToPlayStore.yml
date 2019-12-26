@@ -15,7 +15,8 @@ jobs:
       - name: create release apk
         uses: r0adkll/sign-android-release@v1
         with:
-          releaseDirectory: /app/build/outputs/apk/release
+#          releaseDirectory: /app/build/outputs/apk/release
+          releaseDirectory: /app/release
           signingKeyBase64: ${{ secrets.SIGNING_KEY }}
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
@@ -25,7 +26,8 @@ jobs:
         with:
           serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: il.co.moveo.github_action_test
-          releaseFile: /app/build/outputs/apk/release/app-release.apk
+#          releaseFile: /app/build/outputs/apk/release/app-release.apk
+          releaseFile: /app/release/app-release.apk
   #         track: production
   #         userFraction: 1
   #         whatsNewDirectory: /distribution/whatsnew

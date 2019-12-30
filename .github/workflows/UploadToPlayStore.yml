@@ -22,7 +22,7 @@ jobs:
 
 
       - name: Upload Android Release to Play Store
-      - uses: actions/checkout@v1
+        uses: actions/checkout@v1
 #          alias: ${{ secrets.ALIAS }}
 #          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
 #          keyPassword: ${{ secrets.KEY_PASSWORD }}

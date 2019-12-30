@@ -33,8 +33,8 @@ jobs:
           serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: il.co.moveo.github_action_test
 #          releaseFile: /app/build/outputs/apk/release/app-release.apk
-          releaseFile: ${{GITHUB_WORKSPACE}}/app/release/app-release.apk
-  #         track: production
+          releaseFile: app/release/app-release.apk
+           track: production
   #         userFraction: 1
   #         whatsNewDirectory: /distribution/whatsnew
   #         mappingFile: /app/build/outputs/mapping/release/mapping.txt

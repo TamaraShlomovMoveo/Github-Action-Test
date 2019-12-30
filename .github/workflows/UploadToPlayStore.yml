@@ -32,7 +32,7 @@ jobs:
         with:
           serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: il.co.moveo.github_action_test
-          releaseFile: /app/release/app-release.apk
+          releaseFile: /Github-Action-Test/app/release/app-release.apk
 #          releaseFile: /app/build/outputs/apk/release/app-release.apk
 #          track: production
   #         userFraction: 1

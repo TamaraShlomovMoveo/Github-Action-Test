@@ -24,17 +24,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-#          alias: ${{ secrets.ALIAS }}
-#          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-#          keyPassword: ${{ secrets.KEY_PASSWORD }}
       - name: Upload Android Release to Play Store
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: il.co.moveo.github_action_test
-          releaseFile: /Github-Action-Test/app/release/app-release.apk
-#          releaseFile: /app/build/outputs/apk/release/app-release.apk
-#          track: production
+          releaseFile: /app/release/app-release.apk
+
+
+
+  #          alias: ${{ secrets.ALIAS }}
+  #          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+  #          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+  #          releaseFile: /app/build/outputs/apk/release/app-release.apk
+  #          track: production
   #         userFraction: 1
   #         whatsNewDirectory: /distribution/whatsnew
   #         mappingFile: /app/build/outputs/mapping/release/mapping.txt

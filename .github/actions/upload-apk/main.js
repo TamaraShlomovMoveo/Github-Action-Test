@@ -2,14 +2,15 @@
    const core = require('@actions/core');
 
    const serviceAccount = JSON.parse(core.getInput('SERVICE_ACCOUNT_JSON'));
-
+   console.log(serviceAccount.client_email);
+   
    const apkup = new Apkup({
        client_email: serviceAccount.client_email,
 //       private_key: serviceAccount.private_key
        private_key: serviceAccount.private_key
    });
 
-   
+
 
    const releaseFilePath = process.env.GITHUB_WORKSPACE + '/app-release.apk';
 

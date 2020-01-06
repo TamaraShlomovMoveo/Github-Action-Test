@@ -2,13 +2,11 @@
    const core = require('@actions/core');
 
    const serviceAccount = JSON.parse(core.getInput('SERVICE_ACCOUNT_JSON'));
-   console.log(serviceAccount);
-   console.log(Object.keys(serviceAccount));
 
    const apkup = new Apkup({
-       client_email: 'moveo-service-account-212@api-5645872680891446472-637751.iam.gserviceaccount.com',
+       client_email: serviceAccount.client_email,
 //       private_key: serviceAccount.private_key
-       private_key: private_key
+       private_key: serviceAccount.private_key
    });
 
    const releaseFilePath = process.env.GITHUB_WORKSPACE + '/app-release.apk';

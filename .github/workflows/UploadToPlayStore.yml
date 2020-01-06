@@ -35,6 +35,10 @@ jobs:
           test -f /home/runner/work/Github-Action-Test/Github-Action-Test/app/release/app-release.apk && echo "I should not print"
           test -f /home/runner/work/Github-Action-Test/Github-Action-Test/app-release.apk && echo "I am existing again"
 
+      - name: upload apk
+        uses: ./.github/actions/upload-apk
+        id: apk
+
       - name: Upload Android Release to Play Store
         uses: r0adkll/upload-google-play@v1.0.2
         with:

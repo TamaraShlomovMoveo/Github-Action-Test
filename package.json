@@ -1,0 +1,6 @@
+{
+  "name": "Github-Action-Test",
+  "dependencies": {
+    "apkup": "^1.2.0"
+  }
+}

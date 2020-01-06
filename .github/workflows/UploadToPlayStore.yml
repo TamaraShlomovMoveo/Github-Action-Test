@@ -29,12 +29,12 @@ jobs:
           ls /$GITHUB_WORKSPACE
           test -f /$GITHUB_WORKSPACE/app/release/app-release.apk && echo "I am exist"
 
-#      - name: Upload Android Release to Play Store
-#        uses: r0adkll/upload-google-play@v1
-#        with:
-#          serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
-#          packageName: il.co.moveo.github_action_test
-#          releaseFile: '${{ GITHUB_WORKSPACE }}/app/release/app-release.apk'
+      - name: Upload Android Release to Play Store
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          packageName: il.co.moveo.github_action_test
+          releaseFile: /${{ github.workspace }}/app/release/app-release.apk
 
 
 

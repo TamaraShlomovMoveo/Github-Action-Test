@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: echo files
+        run: ls /$GITHUB_WORKSPACE
+
       - name: Upload Android Release to Play Store
         uses: r0adkll/upload-google-play@v1
         with:

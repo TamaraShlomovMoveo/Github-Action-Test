@@ -3,6 +3,8 @@
 
    const serviceAccount = JSON.parse(core.getInput('SERVICE_ACCOUNT_JSON'));
    console.log(serviceAccount.client_email);
+
+
    
    const apkup = new Apkup({
        client_email: serviceAccount.client_email,

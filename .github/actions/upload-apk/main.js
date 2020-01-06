@@ -9,6 +9,8 @@
        private_key: serviceAccount.private_key
    });
 
+   
+
    const releaseFilePath = process.env.GITHUB_WORKSPACE + '/app-release.apk';
 
    apkup

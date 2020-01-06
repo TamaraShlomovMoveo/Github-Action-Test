@@ -28,6 +28,8 @@ jobs:
         with:
           node-version: '10.x'
 
+      - run: npm i
+
       - name: echo files
         run: |
           ls /$GITHUB_WORKSPACE

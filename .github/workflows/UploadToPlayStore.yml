@@ -32,11 +32,14 @@ jobs:
           test -f /home/runner/work/Github-Action-Test/Github-Action-Test/app-release.apk && echo "I am existing again"
 
       - name: Upload Android Release to Play Store
-        uses: r0adkll/upload-google-play@v1
+        uses: r0adkll/upload-google-play@v1.0.2
         with:
           serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: il.co.moveo.github_action_test
           releaseFile: ${{ github.workspace }}/app-release.apk
+          track: production
+          userFraction: 1.0
+
 
 
 

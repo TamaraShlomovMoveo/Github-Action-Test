@@ -5,7 +5,7 @@
    console.log(serviceAccount.client_email);
 
 
-   
+
    const apkup = new Apkup({
        client_email: serviceAccount.client_email,
 //       private_key: serviceAccount.private_key

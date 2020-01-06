@@ -1,5 +1,0 @@
-name: "upload-apk"
-description: "uploading the release file apk"
-runs:
-  using: 'node12'
-  main: 'main.js'

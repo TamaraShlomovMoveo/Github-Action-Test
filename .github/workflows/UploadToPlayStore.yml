@@ -25,7 +25,9 @@ jobs:
         uses: actions/checkout@v1
 
       - name: echo files
-        run: ls /$GITHUB_WORKSPACE
+        run: |
+          ls /$GITHUB_WORKSPACE
+          test -f /$GITHUB_WORKSPACE/app/release/app-release.apk && echo "I am exist"
 
 #      - name: Upload Android Release to Play Store
 #        uses: r0adkll/upload-google-play@v1

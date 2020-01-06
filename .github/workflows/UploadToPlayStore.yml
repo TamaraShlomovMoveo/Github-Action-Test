@@ -38,7 +38,7 @@ jobs:
           packageName: il.co.moveo.github_action_test
           releaseFile: ${{ github.workspace }}/app-release.apk
           track: production
-          userFraction: 1.0
+          userFraction: 0.5
 
 
 

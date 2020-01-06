@@ -25,4 +25,5 @@
        })
        .catch(err => {
            console.log("Failed uoloading", err);
+           console.log(err.response.data);
        })

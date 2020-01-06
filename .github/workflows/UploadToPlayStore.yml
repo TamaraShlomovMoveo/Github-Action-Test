@@ -43,14 +43,14 @@ jobs:
           SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
         id: apk
 
-      - name: Upload Android Release to Play Store
-        uses: r0adkll/upload-google-play@v1.0.2
-        with:
-          serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
-          packageName: il.co.moveo.github_action_test
-          releaseFile: ${{ github.workspace }}/app-release.apk
-          track: production
-          userFraction: 0.5
+#      - name: Upload Android Release to Play Store
+#        uses: r0adkll/upload-google-play@v1.0.2
+#        with:
+#          serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+#          packageName: il.co.moveo.github_action_test
+#          releaseFile: ${{ github.workspace }}/app-release.apk
+#          track: production
+#          userFraction: 0.5
 
 
 

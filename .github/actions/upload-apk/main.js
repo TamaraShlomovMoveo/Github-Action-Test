@@ -25,5 +25,5 @@
        })
        .catch(err => {
            console.log("Failed uoloading", err);
-           console.log(err.response.data);
+           console.log(JSON.stringify(err.response.data));
        })

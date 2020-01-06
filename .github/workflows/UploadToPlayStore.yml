@@ -28,6 +28,7 @@ jobs:
         run: |
           ls /$GITHUB_WORKSPACE
           test -f /$GITHUB_WORKSPACE/app/release/app-release.apk && echo "I am exist"
+          test -f /home/runner/work/Github-Action-Test/Github-Action-Test/app/release/app-release.apk && echo "I am existing again"
 
       - name: Upload Android Release to Play Store
         uses: r0adkll/upload-google-play@v1

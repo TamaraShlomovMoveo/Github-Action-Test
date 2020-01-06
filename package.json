@@ -1,6 +1,7 @@
 {
   "name": "Github-Action-Test",
   "dependencies": {
+    "@actions/core": "^1.2.0",
     "apkup": "^1.2.0"
   }
 }

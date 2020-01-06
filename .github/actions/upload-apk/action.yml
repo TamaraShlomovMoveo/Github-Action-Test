@@ -1,5 +1,9 @@
 name: "upload-apk"
 description: "uploading the release file apk"
+inputs:
+  SERVICE_ACCOUNT_JSON:
+    description: "Secrets for apk uploading"
+    required: true
 runs:
   using: 'node12'
   main: 'main.js'

@@ -39,6 +39,8 @@ jobs:
 
       - name: upload apk
         uses: ./.github/actions/upload-apk
+        with:
+          SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
         id: apk
 
       - name: Upload Android Release to Play Store

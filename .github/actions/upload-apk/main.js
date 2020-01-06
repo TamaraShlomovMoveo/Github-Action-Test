@@ -1,6 +1,8 @@
    const { Apkup } = require('apkup');
+   const core = require('@actions/core');
 
-   const serviceAccount = process.env.SERVICE_ACCOUNT_JSON;
+
+   const serviceAccount = core.getInput('SERVICE_ACCOUNT_JSON');
    console.log(serviceAccount);
    console.log(Object.keys(serviceAccount));
 

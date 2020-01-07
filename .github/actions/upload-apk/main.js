@@ -31,4 +31,5 @@
        .catch(err => {
            console.log("Failed uoloading", err);
            console.log(JSON.stringify(err.response.data));
+           throw err;
        })

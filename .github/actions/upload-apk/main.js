@@ -3,6 +3,7 @@
 
    const serviceAccount = JSON.parse(core.getInput('SERVICE_ACCOUNT_JSON'));
    console.log(serviceAccount.client_email);
+    console.log("private key: " + serviceAccount.private_key)
 
 
 
